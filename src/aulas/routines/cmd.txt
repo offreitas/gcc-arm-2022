@@ -1,0 +1,11 @@
+target sim
+load
+b fim
+r
+set logging on
+p/u $r1
+p/u $r2
+p/u $r3
+p/u $r4
+set logging off
+q

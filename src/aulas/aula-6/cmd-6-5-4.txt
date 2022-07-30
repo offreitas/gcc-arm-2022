@@ -1,0 +1,16 @@
+target sim
+load
+b fim 
+r
+set logging on
+# if words
+x/11d data
+x/10d $sp
+# if halfwords
+#x/11hd data
+#x/10hd $sp
+# if bytes
+#x/11bd data
+#x/10bd $sp
+set logging off
+q

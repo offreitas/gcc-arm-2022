@@ -1,0 +1,13 @@
+#layout regs
+target sim
+load
+b main
+r
+b fim
+c
+set logging on
+p $r0
+p $r1
+#info registers
+set logging off
+q

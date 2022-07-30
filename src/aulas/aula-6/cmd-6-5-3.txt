@@ -1,0 +1,19 @@
+# arquivo: comandos.txt
+# gera: gdb.txt - saida do gdb 
+# arm-elf-gdb  --command=comandos.txt a.out
+# Vamos atribuir trabalho 1 para o de menor USP e trabalho 3 para o maior NUSP. Se sua equipe tiver 3 elementos atribua trabalho2 para o nUSP intermediario. 
+
+target sim
+load
+b main
+r
+# breakpoint no SWI
+b fim 
+c
+set logging on
+# para quadrado 4x4
+x/16d quadrado
+# 1- magico 0 - nao eh magico 
+x/d ehmagico 
+set logging off
+q

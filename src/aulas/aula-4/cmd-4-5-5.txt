@@ -1,0 +1,9 @@
+#layout regs
+target sim
+load
+b fim
+r
+set logging on
+x/13ub fib
+set logging off
+q

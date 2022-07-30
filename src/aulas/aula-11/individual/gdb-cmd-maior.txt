@@ -1,0 +1,13 @@
+target remote localhost:1234
+load
+set breakpoint pending on
+b ve_linhaA
+b ve_linhaB
+c
+set logging on
+x/17x $r0
+c
+x/17x $r0
+set logging off
+k
+q

@@ -1,0 +1,10 @@
+target remote localhost:1234
+load
+set breakpoint pending on
+b vesp_saida
+c
+set logging on
+p $r0
+set logging off
+k
+q

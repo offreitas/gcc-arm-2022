@@ -1,0 +1,14 @@
+#layout regs
+target sim
+load
+b post
+b pre
+b fim
+r
+c
+set logging on
+p/d $r0
+c
+p/d $r0
+set logging off
+q

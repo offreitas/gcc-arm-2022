@@ -1,0 +1,13 @@
+target sim
+load
+b bubbleSort
+b fim
+r
+set logging on
+x/9d arr+4
+set logging off
+c
+set logging on
+x/9d arr+4
+set logging off
+q

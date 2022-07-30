@@ -1,0 +1,10 @@
+#layout regs
+target sim
+load
+b fim
+r
+set logging on
+x/10u A
+x/10u B
+set logging off
+q

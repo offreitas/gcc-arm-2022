@@ -1,0 +1,161 @@
+$1 = {80, 70, 60, 50, 40, 30, 20, 10}
+$2 = {10, 20, 30, 40, 50, 60, 70, 80}
+$1 = 1
+$1 = 10
+$1 = 10
+$1 = 16
+cmd.txt:11: Error in sourced command file:
+Invalid character '#' in expression.
+The program is running.  Exit anyway? (y or n) $1 = 16
+
+Breakpoint 3, fim () at 4-5-1.s:21
+21	    swi     0x123456
+$2 = 16
+cmd.txt:10: Error in sourced command file:
+No symbol "array_a" in current context.
+The program is running.  Exit anyway? (y or n) $1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+
+Breakpoint 3, fim () at 4-5-2.s:26
+26	    swi     0x123456
+$2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+
+Breakpoint 3, fim () at 4-5-2.s:26
+26	    swi     0x123456
+$2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+
+Breakpoint 3, fim () at 4-5-2.s:26
+26	    swi     0x123456
+$2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+
+Breakpoint 3, fim () at 4-5-2.s:26
+26	    swi     0x123456
+$2 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25}
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	-112
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	-112
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	-112
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	144
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	144	233
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	144	233	121
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	144	233	159
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	144	80	159
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89
+0x8248 <fib>:	0	1	1	2	3	5	8	13
+0x8250 <atexit+4>:	21	34	55	89	144
+cmd.txt:7: Error in sourced command file:
+No symbol "ultimo" in current context.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+No symbol "ultimo" in current context.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+No symbol "ultimo" in current context.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+No symbol "ultimo" in current context.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+No symbol "ultimo" in current context.
+$1 = cmd.txt:7: Error in sourced command file:
+Value can't be converted to integer.
+The program is running.  Exit anyway? (y or n) $1 = cmd.txt:7: Error in sourced command file:
+Value can't be converted to integer.
+The program is running.  Exit anyway? (y or n) $1 = {<text variable, no debug info>} 0x8260 <ultimo>
+$1 = {<text variable, no debug info>} 0x8260 <ultimo>
+$1 = {<text variable, no debug info>} 0x8260 <ultimo>
+$1 = cmd.txt:7: Error in sourced command file:
+Value can't be converted to integer.
+The program is running.  Exit anyway? (y or n) $1 = cmd.txt:7: Error in sourced command file:
+Value can't be converted to integer.
+The program is running.  Exit anyway? (y or n) $1 = cmd.txt:7: Error in sourced command file:
+Value can't be converted to integer.
+The program is running.  Exit anyway? (y or n) $1 = cmd.txt:7: Error in sourced command file:
+Value can't be converted to integer.
+The program is running.  Exit anyway? (y or n) $1 = cmd.txt:7: Error in sourced command file:
+Value can't be converted to integer.
+The program is running.  Exit anyway? (y or n) 0x8268 <ultimo>:	89
+0x8268 <ultimo>:	144
+0x8268 <ultimo>:	-811192543
+0x8268 <ultimo>:	3483774753
+0x8268 <ultimo>:	3996334433
+0x8268 <ultimo>:	3996334433
+0x8268 <ultimo>:	3996334433
+0x8268 <ultimo>:	3996334433
+0x8268 <ultimo>:	-298632863
+0x8268 <ultimo>:	-298632863
+0x8268 <ultimo>:	433494437
+cmd.txt:7: Error in sourced command file:
+No symbol "A" in current context.
+The program is running.  Exit anyway? (y or n) 0x1:	 "ø\237å\233\b"
+0x0:	 "\b"
+cmd.txt:7: Error in sourced command file:
+Non-integral right operand for "@" operator.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+Invalid number 0 of repetitions.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+Invalid number 0 of repetitions.
+The program is running.  Exit anyway? (y or n) $1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+cmd.txt:7: Error in sourced command file:
+No symbol "A" in current context.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+No symbol "A" in current context.
+The program is running.  Exit anyway? (y or n) $1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+$1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+cmd.txt:7: Error in sourced command file:
+Non-integral right operand for "@" operator.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+Non-integral right operand for "@" operator.
+The program is running.  Exit anyway? (y or n) cmd.txt:7: Error in sourced command file:
+Non-integral right operand for "@" operator.
+The program is running.  Exit anyway? (y or n) 0x824c <A>:	0	0	0	0
+0x825c <A+16>:	0	0	0	0
+0x826c <A+32>:	0	0
+0x8244 <A>:	1	1	1	1
+0x8254 <A+16>:	1	1	1	1
+0x8264 <A+32>:	1	1
+0x8248 <A>:	0	0	0	0
+0x8258 <A+16>:	0	0	0	0
+0x8268 <A+32>:	0	0
+0x8294 <B>:	1	2	3	4
+0x82a4 <B+16>:	5	6	7	8
+0x82b4 <B+32>:	9	10
+0x8294 <B>:	1	2	3	4
+0x82a4 <B+16>:	5	6	7	8
+0x82b4 <B+32>:	9	10
+0x8298 <B>:	1	2	3	4
+0x82a8 <B+16>:	5	6	7	8
+0x82b8 <B+32>:	9	10
+0x8294 <B>:	1	2	3	4
+0x82a4 <B+16>:	5	6	7	8
+0x82b4 <B+32>:	9	10
+0x8294 <B>:	1	2	3	4
+0x82a4 <B+16>:	5	6	7	8
+0x82b4 <B+32>:	9	10
+0x8294 <B>:	0	0	0	0
+0x82a4 <B+16>:	0	0	0	0
+0x82b4 <B+32>:	0	0
+0x8294 <B>:	0	0	0	0
+0x82a4 <B+16>:	0	0	0	0
+0x82b4 <B+32>:	0	0
+0x8298 <B>:	0	0	0	0
+0x82a8 <B+16>:	0	0	0	0
+0x82b8 <B+32>:	0	0
+0x8270 <A>:	0	0	0	0
+0x8280 <A+16>:	0	0	0	0
+0x8290 <A+32>:	0	0
+0x8298 <B>:	0	0	0	0
+0x82a8 <B+16>:	0	0	0	0
+0x82b8 <B+32>:	0	0

@@ -1,0 +1,8 @@
+target sim
+load
+b stop
+r
+set logging on
+p/u $r4
+set logging off
+q
