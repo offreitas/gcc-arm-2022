@@ -3,42 +3,35 @@ LABEL maintainer "Otavio Freitas"
 
 CMD ["/bin/bash"]
 
-# Build arg: Preferred text editor (default = vim)
-ARG	EDITORPKG=vim
+# Install arm-elf
+ADD	files/bu-2.15_gcc-3.4.3-c-c++-java_nl-1.12.0_gi-6.1.tar.bz2	/
+ADD files/i386-linux-gnu.tar.gz /lib
+# ADD files/sources.list /etc/apt/
+ADD files/i386.list /etc/apt/sources.list.d/
 
-RUN apt-get update && apt-get install -y
-RUN apt-get install -y vim
-RUN apt-get install -y texinfo
-RUN apt-get install -y libgmp-dev
-RUN apt-get install -y libexpat-dev
-RUN apt-get install -y wget
-RUN apt-get install -y build-essential
-RUN apt-get install -y gdb-multiarch
+RUN sed 's/^deb http/deb [arch=armhf] http/' -i '/etc/apt/sources.list'
 
 RUN dpkg --add-architecture i386 \
-	&& apt-get install -y libc6-dev libc6 libc6-i386-cross \
-	&& apt-get install -y libstdc++6 libstdc++6-i386-cross \
-	&& apt-get install -y libx11-6 \
-	&& apt-get install -y libncurses5 libncurses5-dev \
-	&& apt-get install -y qemu-system-arm
+	&& apt-get update
 
-RUN cd /\
-	&& wget https://developer.arm.com/-/media/Files/downloads/gnu/11.2-2022.02/binrel/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi.tar.xz
+RUN apt-get install -f -y \
+		libc6:i386 
+		libncurses5:i386 \
+		libstdc++6:i386 \
+		libx11-6:i386
 
-# RUN cd / \
-# 	&& wget https://ftp.gnu.org/gnu/gdb/gdb-12.1.tar.gz
+# RUN dpkg --add-architecture i386 \
+# 	&& apt-get update
+	# # && apt-get install -y libc6-dev libc6 libc6-i386-cross \
+	# # && apt-get install -y libstdc++6 libstdc++6-i386-cross \
+	# # && apt-get install -y libx11-dev \
+	# # && apt-get install -y libncurses5 libncurses5-dev \
+	# && apt-get install -y qemu-system-arm \
+	# && apt-get install -y gcc-arm-none-eabi \
+	# && apt-get install -y gdb-arm-none-eabi \
+	# && apt-get install -y gcc-arm-linux-gnueabihf
 
-# RUN tar -xf gdb-12.1.tar.gz \
-# 	&& rm -rf gdb-12.1.tar.gz
-	
-# RUN	cd gdb-12.1 \
-# 	&& mkdir build \
-# 	&& cd build \
-# 	&& sh ../configure --prefix=/usr/local/gdb-12.1 \
-# 					   --enable-target=all \ 
-# 					   --enable-tui \
-# 	&& make \
-# 	&& make -C gdb install
+RUN ln -s /usr/i686-linux-gnu/lib/* /lib/
 
 # Create non-root "student" user
 RUN	useradd -mG sudo student && mkdir -p /etc/sudoers.d && \

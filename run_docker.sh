@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 IMAGE="$(docker ps -q -f ancestor=offreitas/gcc-arm-2022)"
 
