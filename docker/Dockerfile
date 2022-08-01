@@ -4,34 +4,26 @@ LABEL maintainer "Otavio Freitas"
 CMD ["/bin/bash"]
 
 # Install arm-elf
-ADD	files/bu-2.15_gcc-3.4.3-c-c++-java_nl-1.12.0_gi-6.1.tar.bz2	/
-ADD files/i386-linux-gnu.tar.gz /lib
-# ADD files/sources.list /etc/apt/
 ADD files/i386.list /etc/apt/sources.list.d/
+ADD files/gdb-12.1.tar.gz /
 
-RUN sed 's/^deb http/deb [arch=armhf] http/' -i '/etc/apt/sources.list'
+RUN sed 's/^deb http/deb [arch=arm64] http/' -i '/etc/apt/sources.list'
+
+RUN apt-get update && apt-get install -y
+RUN apt-get install -y build-essential
 
 RUN dpkg --add-architecture i386 \
-	&& apt-get update
-
-RUN apt-get install -f -y \
-		libc6:i386 
+	&& apt-get update \
+	&& apt-get install -y \
+		libc6:i386 \
 		libncurses5:i386 \
 		libstdc++6:i386 \
-		libx11-6:i386
-
-# RUN dpkg --add-architecture i386 \
-# 	&& apt-get update
-	# # && apt-get install -y libc6-dev libc6 libc6-i386-cross \
-	# # && apt-get install -y libstdc++6 libstdc++6-i386-cross \
-	# # && apt-get install -y libx11-dev \
-	# # && apt-get install -y libncurses5 libncurses5-dev \
-	# && apt-get install -y qemu-system-arm \
-	# && apt-get install -y gcc-arm-none-eabi \
-	# && apt-get install -y gdb-arm-none-eabi \
-	# && apt-get install -y gcc-arm-linux-gnueabihf
-
-RUN ln -s /usr/i686-linux-gnu/lib/* /lib/
+		libx11-6:i386 \
+		qemu-system-arm:arm64 \
+		gcc-arm-none-eabi:arm64 \
+		gdb-arm-none-eabi:arm64 \
+		gcc-arm-linux-gnueabi:arm64 \
+		gdb
 
 # Create non-root "student" user
 RUN	useradd -mG sudo student && mkdir -p /etc/sudoers.d && \
