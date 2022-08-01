@@ -2,12 +2,10 @@
 # Configure user Bash
 export PS1="\e[01;33m\u\e[00m:\e[01;33m\w\e[00m$ "
 export PATH=$PATH
-PATH="$PATH:/gnuarm-3.4.3/bin:/arm-2011.09/bin:/usr/local/gdb-12.1/bin/"
+PATH="$PATH:/gcc-arm-11.2-2022.02-x86_64-arm-none-eabi/bin"
 # arm-elf
-alias elf-gcc="arm-elf-gcc -Wall -Wextra -g"
-alias elf-gdb="arm-elf-gdb -tui --command=/home/student/.gdbinit/default"
-alias arm="arm-linux-gnueabihf-gcc -S"
-alias gcc="arm-linux-gnueabihf-gcc -Wall -Wextra -g"
+alias arm="arm-linux-gnueabi-gcc -S"
+alias gcc="arm-linux-gnueabi-gcc -Wall -Wextra -g"
 alias gdb="gdb -tui --command=/home/student/.gdbinit/default"
 alias e7t="gdb -tui --command=/home/student/.gdbinit/evaluator7t"
 # arm-none-eabi
