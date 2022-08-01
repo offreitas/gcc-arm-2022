@@ -5,7 +5,7 @@ CMD ["/bin/bash"]
 
 # Install arm-elf
 ADD files/i386.list /etc/apt/sources.list.d/
-ADD files/gdb-12.1.tar.gz /
+ADD files/bu-2.15_gcc-3.4.3-c-c++-java_nl-1.12.0_gi-6.1.tar.bz2 /
 
 RUN sed 's/^deb http/deb [arch=arm64] http/' -i '/etc/apt/sources.list'
 
